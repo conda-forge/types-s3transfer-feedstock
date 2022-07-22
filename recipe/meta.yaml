@@ -18,14 +18,14 @@ build:
 
 requirements:
   host:
-    - pip
+    - poetry
     - python >=3.6
   run:
     - python >=3.6
 
 test:
   requires:
-    - pip
+    - poetry
   commands:
     - pip check
     - python -c "import importlib; importlib.import_module('s3transfer-stubs')"
