@@ -1,5 +1,5 @@
 {% set name = "types-s3transfer" %}
-{% set version = "0.6.0.post1" %}
+{% set version = "0.6.0.post2" %}
 {% set lib_version = version.split(".post")[0] %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-s3transfer-{{ version }}.tar.gz
-  sha256: 78479647a44c9f94ca4c0d2b90f8da77013daf35485c8786b618136fb7b4501b
+  sha256: af5222a02eb1491828c01d3f7b0f77bc9600989ecfbff6df63a60b8ba88c4565
 
 build:
   number: 0
