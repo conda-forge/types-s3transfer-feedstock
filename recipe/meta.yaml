@@ -25,6 +25,7 @@ requirements:
 
 test:
   requires:
+    - pip
     - poetry
   commands:
     - pip check
