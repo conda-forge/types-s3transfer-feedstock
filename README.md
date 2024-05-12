@@ -1,13 +1,13 @@
-About types-s3transfer
-======================
+About types-s3transfer-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/types-s3transfer-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/youtype/types-s3transfer
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/types-s3transfer-feedstock/blob/main/LICENSE.txt)
-
-Summary: Type annotations for AWS s3transfer 0.6.0 library
+Summary: Type annotations for AWS s3transfer 0.6.1 library
 
 Development: https://github.com/youtype/types-s3transfer
 
