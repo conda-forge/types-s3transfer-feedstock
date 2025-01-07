@@ -8,27 +8,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-s3transfer-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/types-s3transfer-{{ version }}.tar.gz
   sha256: 0c45331bfd0db210f5043efd2bc3ecd4b3482a02c28faea33edf719b6be38431
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.7,<4.0
+    - python {{ python_min }}
     - pip
     - poetry-core
   run:
-    - python >=3.7,<4.0
+    - python >={{ python_min }},<4.0
     - pip
 
 test:
   requires:
     - pip
     - poetry
+    - python {{ python_min }}
   commands:
     - pip check
     - python -c "import importlib; importlib.import_module('s3transfer-stubs')"
