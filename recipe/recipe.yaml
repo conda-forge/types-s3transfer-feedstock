@@ -29,11 +29,12 @@ tests:
   - requirements:
       run:
         - pip
-        - poetry
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - pip check
-      - python -c "import importlib; importlib.import_module('s3transfer-stubs')"
+  - package_contents:
+      site_packages:
+        - s3transfer-stubs/__init__.pyi
 
 about:
   summary: Type annotations for AWS s3transfer
