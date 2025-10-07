@@ -1,0 +1,48 @@
+schema_version: 1
+
+context:
+  name: types-s3transfer
+  version: 0.6.0.post4
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/types-s3transfer-${{ version }}.tar.gz
+  sha256: 0c45331bfd0db210f5043efd2bc3ecd4b3482a02c28faea33edf719b6be38431
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - poetry-core
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - requirements:
+      run:
+        - pip
+        - poetry
+        - python ${{ python_min }}
+    script:
+      - pip check
+      - python -c "import importlib; importlib.import_module('s3transfer-stubs')"
+
+about:
+  summary: Type annotations for AWS s3transfer
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/youtype/types-s3transfer
+  repository: https://github.com/youtype/types-s3transfer
+
+extra:
+  recipe-maintainers:
+    - vemel
+    - xhochy
