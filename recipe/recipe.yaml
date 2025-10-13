@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: types-s3transfer
-  version: 0.11.2
+  version: 0.11.3
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/types_s3transfer-${{ version }}.tar.gz
-  sha256: 3ccb8b90b14434af2fb0d6c08500596d93f3a83fb804a2bb843d9bf4f7c2ca60
+  sha256: 48b90c1f9950dafd9816d0d1476e3323fbcd3202b74f2908b8a28c58e08e75b9
 
 build:
   number: 0
