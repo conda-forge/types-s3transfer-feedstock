@@ -2,15 +2,15 @@ schema_version: 1
 
 context:
   name: types-s3transfer
-  version: 0.6.0.post4
+  version: 0.6.1
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/types-s3transfer-${{ version }}.tar.gz
-  sha256: 0c45331bfd0db210f5043efd2bc3ecd4b3482a02c28faea33edf719b6be38431
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/types_s3transfer-${{ version }}.tar.gz
+  sha256: 75ac1d7143d58c1e6af467cfd4a96c67ee058a3adf7c249d9309999e1f5f41e4
 
 build:
   number: 2
@@ -24,6 +24,7 @@ requirements:
     - poetry-core
   run:
     - python >=${{ python_min }}
+    - types-awscrt
 
 tests:
   - requirements:
