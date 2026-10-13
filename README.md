@@ -15,10 +15,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16733&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/types-s3transfer-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/types-s3transfer-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/types-s3transfer-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -41,31 +42,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `types-s3transfer` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install types-s3transfer
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install types-s3transfer
 ```
 
-It is possible to list all of the versions of `types-s3transfer` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add types-s3transfer
+# for installing globally
+pixi global install types-s3transfer
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `types-s3transfer` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search types-s3transfer --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search types-s3transfer --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search types-s3transfer --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -77,6 +120,8 @@ mamba repoquery whoneeds types-s3transfer --channel conda-forge
 # List dependencies of `types-s3transfer`:
 mamba repoquery depends types-s3transfer --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
